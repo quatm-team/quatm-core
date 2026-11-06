@@ -159,9 +159,10 @@ def event_monitor(monitor, name, pub_sub, stop_event=None):
             _log.info('[Pub/Sub] %s %s: peer disconnected', name, pub_sub)
         elif event in _HANDSHAKE_FAILURE_EVENTS:
             # 握手失败类事件在正常开关窗口、客户端快速退出、端口被 TCP
-            # 探测/占用时也会触发，不能当作真实错误刷消息流；只进
-            # WARNING 日志（default lastResort 会打到 stderr，排查时可见）。
-            _log.warning('[Pub/Sub] %s %s: %s', name, pub_sub, desc)
+            # 探测/占用时也会触发。Task/Process Monitor 每次刷新都会探测
+            # 端口，因此这里只保留 DEBUG，避免服务日志被可预期的探测噪声
+            # 刷屏；真正的长时间断连仍由 DISCONNECTED + 业务错误体现。
+            _log.debug('[Pub/Sub] %s %s: %s', name, pub_sub, desc)
         if event == zmq.EVENT_MONITOR_STOPPED:
             break
     try:

@@ -2160,5 +2160,7 @@
   "Message Logger": "消息记录器",
   "Web Hub": "Web 中枢",
   "Props Checker": "属性检查器",
-  "Stopping background services…": "正在停止后台服务…"
+  "Stopping background services…": "正在停止后台服务…",
+  "Services: 0 running / 0 total": "服务：0 项运行中 / 共 0 项",
+  "Services: %(running)d running / %(total)d total": "服务：%(running)d 项运行中 / 共 %(total)d 项"
 }
