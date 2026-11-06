@@ -1,0 +1,13 @@
+Quatm Core — NOTICE
+===================
+
+Quatm Core is the GNU AGPLv3-covered part of the Quatm experiment control
+framework. Copyright (C) 2023–2026 QUATM.
+
+The complete AGPLv3 text is in AGPL-3.0.txt and LICENSE. Third-party
+dependencies are listed in THIRD_PARTY_LICENSES; each dependency retains its
+own copyright and licence.
+
+The optional desktop GUI, web console, licensing layer, analysis tools,
+monitoring tools and vendor driver catalogue are separate proprietary
+components and are not part of this repository.

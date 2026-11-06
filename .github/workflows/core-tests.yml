@@ -1,0 +1,31 @@
+name: Core tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    # Pin the runner image: ubuntu-latest now resolves to 26.04, for which
+    # actions/setup-python does not publish a Python 3.9 x64 build. Ubuntu
+    # 24.04 has 3.9, 3.11 and 3.13 toolcache builds available.
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install core
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+      - name: Run tests
+        env:
+          QUATM_SKIP_FIRST_RUN: "1"
+          QT_QPA_PLATFORM: offscreen
+        run: python -m unittest discover -s tests -t . -q

@@ -1,0 +1,133 @@
+THIRD-PARTY LICENSES — quatm
+=============================
+
+quatm does not vendor any third-party source code. All runtime and build
+dependencies are installed via pip as separate wheels, each of which
+carries its own license text in your site-packages directory. This file
+consolidates the notice required for redistribution and identifies where
+each license text can be found.
+
+One exception is documented in section 2b: the GUI icon set is bundled as
+SVG assets (Font Awesome Free, CC BY 4.0 — attribution below).
+
+quatm 不捆绑任何第三方源码。全部运行/构建依赖均通过 pip 以独立 wheel
+安装，各自 wheel 自带许可文本（位于你的 site-packages 目录）。本文件
+汇总再分发所需声明，并给出各许可文本的获取位置。
+
+唯一例外见 2b 节：界面图标集以 SVG 资源形式随包分发（Font Awesome
+Free，CC BY 4.0，归属声明见下）。
+
+For each dependency: name — SPDX license — where to find the text.
+每个依赖：名称 — SPDX 许可 — 许可文本位置。
+
+--------------------------------------------------------------------------
+1. 随 quatm 自身分发的许可文本
+   License texts shipped inside quatm itself
+--------------------------------------------------------------------------
+
+  AGPL-3.0.txt ............ GNU AGPLv3 (covers quatm/experiment, physics,
+                            servers, utils — see LICENSE)
+  LICENSE ................. split-license terms (AGPLv3 core + proprietary)
+  NOTICE .................. third-party summary
+  Each of quatm/{experiment,physics,servers,utils}/LICENSE ........ AGPLv3
+  quatm/{GUI,web,licensing}/LICENSE ............................ proprietary
+
+--------------------------------------------------------------------------
+2. 运行依赖 Runtime dependencies (pip wheels)
+--------------------------------------------------------------------------
+
+License texts are inside each installed wheel, e.g.
+`<site-packages>/PySide6-*/dist-info/licenses/` or the package directory.
+文本位置示例：`<site-packages>/<包名>-*/dist-info/licenses/`。
+
+  PySide6 ................. LGPL-3.0 (used via dynamic linking; the Qt for
+                            Python project also offers GPL/commercial —
+                            quatm uses the LGPL terms). Qt licensing info:
+                            https://doc.qt.io/qt-6/licensing.html
+  numpy ................... BSD-3-Clause
+  scipy ................... BSD-3-Clause
+  matplotlib .............. PSF-2.0 (Matplotlib license)
+  pandas .................. BSD-3-Clause
+  uncertainties ........... BSD-3-Clause
+  h5py .................... BSD-3-Clause
+  pyqtgraph ............... MIT
+  pyzmq ................... BSD-3-Clause (>=26; earlier: LGPL-3.0 with
+                            static-linking exception)
+  pillow .................. HPND
+  pyusb ................... BSD-3-Clause
+  pyvisa-py ............... MIT
+  python-usbtmc ........... MIT
+  cryptography ............ Apache-2.0 OR BSD-3-Clause
+  Cython .................. Apache-2.0
+  astropy ................. BSD-3-Clause
+  scikit-image ............ BSD-3-Clause
+  lmfit ................... BSD-3-Clause
+  toptica-lasersdk ........ MIT
+  pyserial ................ BSD-3-Clause
+  pyperclip ............... BSD-3-Clause
+  influxdb_client ......... MIT
+  mattermostdriver ........ MIT
+  termcolor ............... MIT
+  sh ...................... MIT
+  pytz .................... MIT
+  python-dateutil ......... Apache-2.0 (and BSD-3 for portions)
+  future .................. MIT
+  psutil .................. BSD-3-Clause
+  tqdm .................... MPL-2.0 AND MIT (quatm relies on the MIT terms)
+  bokeh ................... BSD-3-Clause
+  opencv-python-headless .. Apache-2.0
+  imageio ................. BSD-2-Clause
+  aiohttp ................. Apache-2.0
+
+--------------------------------------------------------------------------
+2b. 随包分发的资源 Bundled assets (not pip dependencies)
+--------------------------------------------------------------------------
+
+  Font Awesome Free 6.7.2 (icon subset) ... Icons: CC BY 4.0
+      Files:  quatm/icons/fa/*.svg  (subset used by the GUI)
+              quatm/icons/app/*.png (per-GUI application icons, rendered
+              from those SVGs by tools/icons/build_app_icons.py)
+      Text:   quatm/icons/fa/LICENSE.txt (verbatim, from upstream)
+      Note:   the SVG files are unmodified; quatm recolours them at
+              runtime (copies written to the system temp dir). The app
+              icons only re-render the same shapes (centred, white, on a
+              coloured rounded square), so they are derivatives of the
+              same CC BY 4.0 artwork.
+      Attribution (required by CC BY 4.0):
+        Font Awesome Free 6.7.2 by @fontawesome — https://fontawesome.com
+        License — https://fontawesome.com/license/free
+        Copyright 2024 Fonticons, Inc.
+
+  说明：这些 SVG 未做形状修改；quatm 只在运行期按当前主题文字色着色
+  （着色副本写到系统临时目录，不随包分发）。CC BY 4.0 要求署名，上面的
+  归属声明即为此，界面上见“帮助 → 关于 → 第三方组件与许可”。
+
+--------------------------------------------------------------------------
+3. 可选硬件依赖 Optional hardware dependencies (not bundled, not required)
+--------------------------------------------------------------------------
+
+  ADwin   — wrapper Apache-2.0; vendor library (ADwin) is proprietary and
+            must be installed separately by the user.
+  mcculw  — wrapper MIT; vendor drivers (UL/InstaCal, Windows) proprietary.
+  pipython — Physik Instrumente — PROPRIETARY EULA. Redistribution is NOT
+            permitted; end users install it themselves and accept the PI
+            licence.
+
+--------------------------------------------------------------------------
+4. 官方许可文本链接 Official license text links
+--------------------------------------------------------------------------
+
+  AGPLv3:     https://www.gnu.org/licenses/agpl-3.0.txt
+  LGPLv3:     https://www.gnu.org/licenses/lgpl-3.0.txt
+  LGPLv2.1:   https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
+  BSD-3:      https://opensource.org/licenses/BSD-3-Clause
+  BSD-2:      https://opensource.org/licenses/BSD-2-Clause
+  MIT:        https://opensource.org/licenses/MIT
+  Apache-2.0: https://www.apache.org/licenses/LICENSE-2.0
+  MPL-2.0:    https://www.mozilla.org/en-US/MPL/2.0/
+  HPND:       https://opensource.org/license/hpnd/
+  CC BY 4.0:  https://creativecommons.org/licenses/by/4.0/
+  SIL OFL 1.1: https://openfontlicense.org/
+
+This file itself is part of the quatm NOTICE material and may be
+reproduced with the quatm distributions.

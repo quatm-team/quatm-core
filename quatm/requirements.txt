@@ -1,0 +1,19 @@
+# Core runtime dependencies (canonical list lives in pyproject.toml).
+pyside6>=6.5
+numpy
+pyzmq>=26
+pyqtgraph
+termcolor
+h5py
+psutil
+scipy
+uncertainties
+pytz
+pyserial
+requests
+python-dateutil
+tqdm
+matplotlib
+pandas
+cryptography
+cython
