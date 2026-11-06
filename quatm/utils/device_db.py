@@ -9,6 +9,8 @@ The parser has no Qt, hardware or licensing dependencies and is safe to use
 from the core CLI, diagnostics and the optional desktop tools.
 """
 
+from quatm.i18n import tr
+
 import ast
 import json
 import os
@@ -117,9 +119,9 @@ def parse_device_db(root=None):
             'partial': is_partial,
         })
     entries.sort(key=lambda item: (item['type'], item['name']))
-    note = '%d device(s) registered in device_db.py' % len(entries)
+    note = tr('%d device(s) registered in device_db.py') % len(entries)
     if partial:
-        note += ' (%d entry/entries contain expressions)' % partial
+        note += tr(' (%d entry/entries contain expressions)') % partial
     return entries, note
 
 

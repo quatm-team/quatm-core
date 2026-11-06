@@ -68,8 +68,8 @@
   "<html><head/><body><p>When checked, the axis will only auto-scale to data that is visible along the orthogonal axis.</p></body></html>": "<html><head/><body><p>勾选后，该轴只按另一轴上可见的数据自动缩放。</p></body></html>",
   "A linear scan from Start to End with 'Steps' points is written into all %d selected task(s).": "把从起点到终点、共“步数”个点的线性扫描写入全部 %d 个所选任务。",
   "A new key pair was generated. Copy the private key somewhere safe first, then click “Write the public key into the software”.": "已生成新的密钥对。请先把私钥复制保存到安全的地方，再点击「把公钥写入软件」。",
-  "ADwin Manual Control": "ADwin Manual Control",
-  "Ablation Monitor": "Ablation Monitor",
+  "ADwin Manual Control": "ADwin 手动控制",
+  "Ablation Monitor": "烧蚀监控",
   "Ablation monitor": "烧蚀监控",
   "About": "关于",
   "About %s": "关于 %s",
@@ -2163,5 +2163,15 @@
   "Stopping background services…": "正在停止后台服务…",
   "Services: 0 running / 0 total": "服务：0 项运行中 / 共 0 项",
   "Services: %(running)d running / %(total)d total": "服务：%(running)d 项运行中 / 共 %(total)d 项",
-  "Experiment Browser is not running. Start it to see live tasks.": "实验浏览器未运行。启动后即可查看实时任务。"
+  "Experiment Browser is not running. Start it to see live tasks.": "实验浏览器未运行。启动后即可查看实时任务。",
+  "Servers": "服务器",
+  "GUI": "界面",
+  "Viewer": "查看器",
+  "Monitor": "监视器",
+  "Image Group": "图像组",
+  "%d VISA resource(s)": "%d 个 VISA 资源",
+  "%d serial port(s)": "%d 个串口",
+  "nothing scanned": "未扫描到设备",
+  "%d device(s) registered in device_db.py": "device_db.py 中登记了 %d 台设备",
+  " (%d entry/entries contain expressions)": "（%d 个条目包含表达式）"
 }
