@@ -2159,5 +2159,6 @@
   "Image Logger": "图像记录器",
   "Message Logger": "消息记录器",
   "Web Hub": "Web 中枢",
-  "Props Checker": "属性检查器"
+  "Props Checker": "属性检查器",
+  "Stopping background services…": "正在停止后台服务…"
 }
