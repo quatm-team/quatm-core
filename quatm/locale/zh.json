@@ -2143,5 +2143,21 @@
   "Could not open the start window %s: %s": "无法打开启动窗口 %s：%s",
   "[ProcessManager] %s, stopping all daemon processes": "[ProcessManager] %s，正在停止所有后台服务",
   "Quit QUATM?": "确认退出 Quatm 吗？",
-  "This is the last window. Quit QUATM and stop all background services?": "您正在关闭最后一个活跃窗口。确认退出 QUATM 并停止所有后台服务吗？"
+  "This is the last window. Quit QUATM and stop all background services?": "您正在关闭最后一个活跃窗口。确认退出 QUATM 并停止所有后台服务吗？",
+  "No project selected": "未选择项目",
+  "Start Experiment Browser": "启动实验浏览器",
+  "Launch the Experiment Browser for this project": "启动本项目的实验浏览器",
+  "Experiment Browser requested.": "已请求启动实验浏览器。",
+  "Could not start Experiment Browser.": "无法启动实验浏览器。",
+  "Command Hub": "命令中枢",
+  "Data Hub": "数据中枢",
+  "Image Hub": "图像中枢",
+  "Message Hub": "消息中枢",
+  "Property Hub": "属性中枢",
+  "Property Logger": "属性记录器",
+  "Data Logger": "数据记录器",
+  "Image Logger": "图像记录器",
+  "Message Logger": "消息记录器",
+  "Web Hub": "Web 中枢",
+  "Props Checker": "属性检查器"
 }
